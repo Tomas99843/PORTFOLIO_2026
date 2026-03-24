@@ -1,30 +1,25 @@
-import React from "react";
+import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import logo from "/images/Logo.webp";
 import "./NavBar.css";
 
 function NavBar() {
-  
   return (
-    <nav className="navbar p-lateral">
-      <Link to="container_home" smooth={true} duration={500}>
+    <motion.nav
+      className="navbar p-lateral"
+      initial={{ opacity: 0, y: -30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
+      <Link to="container_home" smooth={true} duration={500} offset={-70}>
         <img src={logo} alt="Logo" className="navbar-logo" />
       </Link>
       <div className="navLinks">
-        <Link to="container_home" smooth={true} duration={500} className="navbar-link">
-          Home
-        </Link>
-        <Link to="about_me" smooth={true} duration={500} className="navbar-link">
-          About Me
-        </Link>
-        <Link to="projects" smooth={true} duration={500} className="navbar-link">
-          Projects
-        </Link>
-        <Link to="contact_me" smooth={true} duration={500} className="navbar-link">
-          Contact Me
-        </Link>
+        <Link to="container_home" smooth={true} duration={500} offset={-70} className="navbar-link">Home</Link>
+        <Link to="about_me" smooth={true} duration={500} offset={-70} className="navbar-link">About Me</Link>
+        <Link to="contact_me" smooth={true} duration={500} offset={-70} className="navbar-link">Contact Me</Link>
       </div>
-    </nav>
+    </motion.nav>
   );
 }
 

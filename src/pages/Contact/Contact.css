@@ -1,0 +1,91 @@
+#contact_me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-lg);
+  padding: 80px var(--space-lg);
+  width: 100%;
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+#contact_me .container {
+  max-width: 1200px;
+  width: 100%;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-md) var(--space-lg);
+}
+
+/* --- TÍTULO --- */
+.contact-title {
+  font-size: 28px;
+  font-weight: var(--font-extrabold);
+  color: var(--color-primary);
+  text-align: left;
+  padding-bottom: var(--space-xs);
+  border-bottom: 2px solid var(--color-border);
+  margin-bottom: var(--space-md);
+}
+
+/* --- IMAGEN --- */
+.contact-main-image {
+  max-width: 220px;
+  height: auto;
+  display: block;
+  margin: 0 auto var(--space-md) auto;
+  mix-blend-mode: multiply;
+  filter: none;
+}
+/* --- CARDS --- */
+.contact-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border) !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: none !important;
+  transition: box-shadow 0.2s, transform 0.2s;
+  height: 100%;
+}
+
+.contact-card:hover {
+  box-shadow: var(--shadow-lg) !important;
+  transform: translateY(-4px);
+}
+
+.contact-card .card-title {
+  font-size: 18px;
+  font-weight: var(--font-semibold);
+  color: var(--color-primary);
+}
+
+.contact-card .card-text {
+  font-size: 15px;
+  color: var(--color-secondary);
+  font-weight: var(--font-regular);
+}
+
+.contact-card .btn {
+  font-size: 15px;
+  font-weight: var(--font-medium);
+  border-radius: var(--radius-sm);
+  transition: background 0.2s, color 0.2s;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  #contact_me {
+    padding: 80px var(--space-sm) var(--space-md) var(--space-sm);
+    gap: var(--space-md);
+  }
+
+  #contact_me .container {
+    padding: var(--space-md);
+  }
+
+  .contact-main-image {
+    max-width: 160px;
+  }
+}

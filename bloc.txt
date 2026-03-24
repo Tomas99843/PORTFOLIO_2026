@@ -16,11 +16,7 @@ src/
           --Home/
                 --Home.jsx
                 --Home.css
-          --Projects/
-                    --Projects.jsx
-                    --Projects.css
    --App.jsx
-   --App.css
    --index.css
    --main.jsx   
 .gitignore
