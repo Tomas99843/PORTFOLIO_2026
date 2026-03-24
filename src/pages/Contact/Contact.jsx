@@ -27,7 +27,7 @@ function Contact() {
       <div className="container">
         <div className="text-center mb-5">
           <img 
-            src="/images/work_togheter.webp" 
+            src="/images/Work_together.webp" 
             alt="Ilustración de contacto" 
             className="img-fluid contact-main-image w-25"
           />

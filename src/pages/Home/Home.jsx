@@ -8,8 +8,7 @@ function Home() {
       <section id="container_home">
         <div className="container_left">
           <h2 className="description_name">Hello! I’m Tomas Cascone</h2>
-          <h1 className="description_job">Frontend <br /> Developer.<br /></h1>
-
+          <h1 className="description_job">  Full Stack <br /> Developer.<br /></h1>
           <h3 className="description_location">Based in Mar del Plata, Argentina.</h3>
         </div>
         <div className="container_right">
