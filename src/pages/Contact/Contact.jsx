@@ -95,7 +95,7 @@ function Contact() {
                 <Card.Title>Email</Card.Title>
                 <Card.Text className="text-muted">{emailAddress}</Card.Text>
                 <a
-                  href={`https://mail.google.com/mail/?view=cm&to=${emailAddress}&su=Contacto desde Portfolio&body=Hola Tomás, te contacto porque...`}
+                  href={"https://mail.google.com/mail/?view=cm&to=tomascascone@gmail.com&su=Contacto desde Portfolio&body=Hola Tomás, te contacto porque..."}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-outline-primary mt-auto"
@@ -106,7 +106,6 @@ function Contact() {
               </Card.Body>
             </Card>
           </motion.div>
-
           {/* LinkedIn */}
           <motion.div
             className="col-xl-4 col-lg-4 col-md-6 mb-4"
