@@ -85,26 +85,29 @@ function Contact() {
           </motion.div>
 
           {/* Email */}
-          <motion.div
-            className="col-xl-4 col-lg-4 col-md-6 mb-4"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
-            variants={fadeUp}
-          >
-            <Card className="contact-card text-center">
-              <Card.Body className="d-flex flex-column">
-                <FaEnvelope size={48} className="mb-3 text-primary mx-auto" />
-                <Card.Title>Email</Card.Title>
-                <Card.Text className="text-muted">{emailAddress}</Card.Text>
-                <Button variant="outline-primary" className="mt-auto" onClick={handleEmailClick}>
-                  <FaEnvelope className="me-2" />
-                  Send Email
-                </Button>
-              </Card.Body>
-            </Card>
-          </motion.div>
+<motion.div
+  className="col-xl-4 col-lg-4 col-md-6 mb-4"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+  transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
+  variants={fadeUp}
+>
+  <Card className="contact-card text-center">
+    <Card.Body className="d-flex flex-column">
+      <FaEnvelope size={48} className="mb-3 text-primary mx-auto" />
+      <Card.Title>Email</Card.Title>
+      <Card.Text className="text-muted">{emailAddress}</Card.Text>
+      <a
+        href={`mailto:${emailAddress}?subject=Contacto desde Portfolio&body=Hola Tomás, te contacto porque...`}
+        className="btn btn-outline-primary mt-auto"
+      >
+        <FaEnvelope className="me-2" />
+        Send Email
+      </a>
+    </Card.Body>
+  </Card>
+</motion.div>
 
           {/* LinkedIn */}
           <motion.div
