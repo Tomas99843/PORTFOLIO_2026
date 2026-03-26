@@ -11,12 +11,12 @@ const fadeUp = {
 
 function Contact() {
   const emailAddress = "tomascascone@gmail.com";
-  const linkedinUrl = "https://linkedin.com/in/tu-usuario"; // ⚠️ Actualizá con tu URL real
+  const linkedinUrl = "https://linkedin.com/in/tomas-cascone/";
 
   const handleDownloadCV = () => {
     const link = document.createElement('a');
-    link.href = '/images/CV_TOMAS_CASCONE.pdf';
-    link.download = 'CV_Tomas_Cascone.pdf';
+    link.href = '/images/CV-TOMAS-CASCONE.pdf';
+    link.download = 'CV-TOMAS-CASCONE.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
