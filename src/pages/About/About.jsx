@@ -23,7 +23,6 @@ function About() {
 
   return (
     <section id="about_me">
-
       {/* --- LIGHTBOX --- */}
       <AnimatePresence>
         {selectedCert && (
@@ -60,15 +59,17 @@ function About() {
       >
         <h2 className="title_about">About Me</h2>
         <p className="text_about_one">
-          My name is <span>Tomas Cascone</span>, I am 27 years old and a Frontend
-          developer based in Mar del Plata, Buenos Aires, Argentina. I am
-          passionate about the world of development and began my education a few
-          years ago.
+          My name is <span>Tomas Cascone</span>, a Full Stack Developer based in
+          Mar del Plata, Buenos Aires, Argentina. I am passionate about web
+          development and have been building my skills across both frontend and
+          backend.
         </p>
         <p className="text_about_two">
           I enjoy designing and developing responsive, functional web
-          applications. As an IT technician, I am strengthening my skills in
-          full-stack development to create modern digital solutions.
+          applications — from crafting clean interfaces with React to building
+          APIs and servers with Node.js and Express. As an IT technician with a
+          Full Stack background, I focus on creating modern, end-to-end digital
+          solutions.
         </p>
       </motion.div>
 
@@ -82,10 +83,22 @@ function About() {
         variants={fadeUp}
       >
         <h3 className="title_do">What I do?</h3>
-        <p className="text_do_1"><span>Implementation of designs.</span> Transform ideas into functional web pages with modern and responsive designs.</p>
-        <p className="text_do_2"><span>Performance optimization.</span> I enhance and optimize web applications by improving resource efficiency.</p>
-        <p className="text_do_3"><span>Development of user interface.</span> I create intuitive and adaptable interfaces for various devices and screen sizes.</p>
-        <p className="text_do_4"><span>Backend development.</span> I build robust solutions to manage data and server-side functionalities.</p>
+        <p className="text_do_1">
+          <span>Implementation of designs.</span> Transform ideas into
+          functional web pages with modern and responsive designs.
+        </p>
+        <p className="text_do_2">
+          <span>Performance optimization.</span> I enhance and optimize web
+          applications by improving resource efficiency.
+        </p>
+        <p className="text_do_3">
+          <span>Development of user interface.</span> I create intuitive and
+          adaptable interfaces for various devices and screen sizes.
+        </p>
+        <p className="text_do_4">
+          <span>Backend development.</span> I build robust solutions to manage
+          data and server-side functionalities.
+        </p>
       </motion.div>
 
       {/* --- MY STACKS --- */}
@@ -102,21 +115,37 @@ function About() {
           <div>
             <h4>Frontend</h4>
             <ul className="skills-list">
-              <li>HTML5</li><li>CSS3</li><li>JavaScript</li>
-              <li>React JS</li><li>SASS</li><li>Bootstrap</li>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+              <li>React JS</li>
+              <li>React Router</li>
+              <li>SASS</li>
+              <li>Bootstrap</li>
+              <li>Tailwind CSS</li>
             </ul>
           </div>
           <div>
             <h4>Backend</h4>
             <ul className="skills-list">
-              <li>NodeJS</li><li>ExpressJS</li><li>MongoDB</li>
+              <li>NodeJS</li>
+              <li>ExpressJS</li>
+              <li>MongoDB</li>
+              <li>REST APIs</li>
+              <li>JWT</li>
+              <li>Variables de entorno</li>
             </ul>
           </div>
           <div>
             <h4>Others</h4>
             <ul className="skills-list">
-              <li>GIT</li><li>GitHub</li><li>Postman</li>
-              <li>Vercel</li><li>Firebase</li>
+              <li>GIT</li>
+              <li>GitHub</li>
+              <li>Postman</li>
+              <li>Vercel</li>
+              <li>Firebase</li>
+              <li>Render</li>
+              <li>GitHub Pages</li>
             </ul>
           </div>
         </div>
@@ -143,7 +172,11 @@ function About() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.1 }}
+                transition={{
+                  duration: 0.5,
+                  ease: "easeOut",
+                  delay: index * 0.1,
+                }}
                 variants={fadeUp}
               >
                 <Card
@@ -151,9 +184,15 @@ function About() {
                   onClick={() => setSelectedCert(cert)}
                   style={{ cursor: "pointer" }}
                 >
-                  <Card.Img variant="top" src={cert.src} className="custom-card-img" />
+                  <Card.Img
+                    variant="top"
+                    src={cert.src}
+                    className="custom-card-img"
+                  />
                   <Card.Body className="d-flex flex-column">
-                    <Card.Title className="custom-card-title">{cert.title}</Card.Title>
+                    <Card.Title className="custom-card-title">
+                      {cert.title}
+                    </Card.Title>
                   </Card.Body>
                 </Card>
               </motion.div>
@@ -161,7 +200,6 @@ function About() {
           </div>
         </div>
       </div>
-
     </section>
   );
 }

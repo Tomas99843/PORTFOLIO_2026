@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import { FaEnvelope, FaFilePdf, FaLinkedin } from 'react-icons/fa';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
-import './Contact.css';
+import { FaEnvelope, FaFilePdf, FaLinkedin } from "react-icons/fa";
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
+import "./Contact.css";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -14,9 +14,9 @@ function Contact() {
   const linkedinUrl = "https://linkedin.com/in/tomas-cascone/";
 
   const handleDownloadCV = () => {
-    const link = document.createElement('a');
-    link.href = '/images/CV-TOMAS-CASCONE.pdf';
-    link.download = 'CV-TOMAS-CASCONE.pdf';
+    const link = document.createElement("a");
+    link.href = "/images/CV-TOMAS-CASCONE.pdf";
+    link.download = "CV-TOMAS-CASCONE.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -25,7 +25,6 @@ function Contact() {
   return (
     <section id="contact_me">
       <div className="container">
-
         {/* --- TÍTULO --- */}
         <motion.h2
           className="contact-title"
@@ -56,7 +55,6 @@ function Contact() {
 
         {/* --- CARDS --- */}
         <div className="row justify-content-center">
-
           {/* CV */}
           <motion.div
             className="col-xl-4 col-lg-4 col-md-6 mb-4"
@@ -73,7 +71,11 @@ function Contact() {
                 <Card.Text className="text-muted">
                   Download my complete CV in PDF format
                 </Card.Text>
-                <Button variant="outline-primary" onClick={handleDownloadCV} className="mt-auto">
+                <Button
+                  variant="outline-primary"
+                  onClick={handleDownloadCV}
+                  className="mt-auto"
+                >
                   📄 Download CV
                 </Button>
               </Card.Body>
@@ -95,7 +97,9 @@ function Contact() {
                 <Card.Title>Email</Card.Title>
                 <Card.Text className="text-muted">{emailAddress}</Card.Text>
                 <a
-                  href={"https://mail.google.com/mail/?view=cm&to=tomascascone@gmail.com&su=Contacto desde Portfolio&body=Hola Tomás, te contacto porque..."}
+                  href={
+                    "https://mail.google.com/mail/?view=cm&to=tomascascone@gmail.com&su=Contacto desde Portfolio&body=Hola Tomás, te contacto porque..."
+                  }
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-outline-primary mt-auto"
@@ -119,7 +123,9 @@ function Contact() {
               <Card.Body className="d-flex flex-column">
                 <FaLinkedin size={48} className="mb-3 text-info mx-auto" />
                 <Card.Title>LinkedIn</Card.Title>
-                <Card.Text className="text-muted">Let's connect professionally</Card.Text>
+                <Card.Text className="text-muted">
+                  Let's connect professionally
+                </Card.Text>
                 <Button
                   variant="outline-primary"
                   className="mt-auto"
@@ -133,7 +139,6 @@ function Contact() {
               </Card.Body>
             </Card>
           </motion.div>
-
         </div>
       </div>
     </section>

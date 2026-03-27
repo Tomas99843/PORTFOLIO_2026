@@ -15,9 +15,33 @@ function NavBar() {
         <img src={logo} alt="Logo" className="navbar-logo" />
       </Link>
       <div className="navLinks">
-        <Link to="container_home" smooth={true} duration={500} offset={-70} className="navbar-link">Home</Link>
-        <Link to="about_me" smooth={true} duration={500} offset={-70} className="navbar-link">About Me</Link>
-        <Link to="contact_me" smooth={true} duration={500} offset={-70} className="navbar-link">Contact Me</Link>
+        <Link
+          to="container_home"
+          smooth={true}
+          duration={500}
+          offset={-70}
+          className="navbar-link"
+        >
+          Home
+        </Link>
+        <Link
+          to="about_me"
+          smooth={true}
+          duration={500}
+          offset={-70}
+          className="navbar-link"
+        >
+          About Me
+        </Link>
+        <Link
+          to="contact_me"
+          smooth={true}
+          duration={500}
+          offset={-70}
+          className="navbar-link"
+        >
+          Contact Me
+        </Link>
       </div>
     </motion.nav>
   );

@@ -20,8 +20,12 @@ function Home() {
           variants={fadeUp}
         >
           <h2 className="description_name">Hello! I'm Tomas Cascone</h2>
-          <h1 className="description_job">Full Stack <br /> Developer.</h1>
-          <h3 className="description_location">Based in Mar del Plata, Argentina.</h3>
+          <h1 className="description_job">
+            Full Stack <br /> Developer.
+          </h1>
+          <h3 className="description_location">
+            Based in Mar del Plata, Argentina.
+          </h3>
         </motion.div>
 
         <motion.div
@@ -32,7 +36,11 @@ function Home() {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
           variants={fadeUp}
         >
-          <img src={my_picture} alt="Foto de perfil de Tomas Cascone" className="description_picture" />
+          <img
+            src={my_picture}
+            alt="Foto de perfil de Tomas Cascone"
+            className="description_picture"
+          />
         </motion.div>
       </div>
     </section>
